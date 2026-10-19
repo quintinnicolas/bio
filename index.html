@@ -4,8 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nicolas Quintin</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 2rem;
+    }
+
+    .chart {
+      display: grid;
+      gap: 0.5rem;
+    }
+
+    .bar {
+      align-items: center;
+      color: #fff;
+      display: flex;
+      height: 2rem;
+      padding-left: 0.5rem;
+    }
+  </style>
 </head>
 <body>
   <p>Nicolas Quintin</p>
+  <h1>Bar chart</h1>
+  <div class="chart" role="img" aria-label="Horizontal bar chart showing values 35, 60, 45, 85, and 70">
+    <div class="bar" style="background-color: #2563eb; width: 35%;">35</div>
+    <div class="bar" style="background-color: #16a34a; width: 60%;">60</div>
+    <div class="bar" style="background-color: #f59e0b; width: 45%;">45</div>
+    <div class="bar" style="background-color: #ef4444; width: 85%;">85</div>
+    <div class="bar" style="background-color: #8b5cf6; width: 70%;">70</div>
+  </div>
 </body>
 </html>
