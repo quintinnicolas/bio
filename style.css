@@ -4,7 +4,7 @@
   --black: #111111;
   --grey: #595959;
   --white: #FFFFFF;
-  --swiss: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --swiss: "Roboto Mono", Helvetica, Arial, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -42,7 +42,11 @@ body {
   font: 800 clamp(3.5rem, 12vw, 4.25rem)/1.2 var(--swiss);
   text-transform: uppercase;
   white-space: nowrap;
-  animation: scroll 20s -8s linear infinite;
+  animation: scroll 30s -10s linear infinite;
+}
+
+.track a {
+  color: var(--white);
 }
 
 .track small { font-size: 0.45em; margin-left: 0.6em; }
