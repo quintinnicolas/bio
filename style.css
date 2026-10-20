@@ -125,14 +125,20 @@ a:focus-visible {
 }
 
 .band a {
+  display: block;
   color: var(--white);
-  font-weight: 600;
-  text-decoration: none;
 }
 
 .band a:hover {
   background: none;
-  text-decoration: underline;
+  opacity: 0.75;
+}
+
+.band svg {
+  display: block;
+  width: 28px;
+  height: 28px;
+  fill: currentColor;
 }
 
 .band a:focus-visible { outline-color: var(--white); }
