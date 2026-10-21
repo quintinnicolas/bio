@@ -1,6 +1,6 @@
 /* Base */
 :root {
-  --blue: #141464;
+  --blue: #1e1e8c;
   --black: #111111;
   --grey: #595959;
   --white: #FFFFFF;
@@ -10,6 +10,9 @@
 * { box-sizing: border-box; }
 
 body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
   margin: 0;
   background: var(--white);
   color: var(--black);
@@ -26,44 +29,58 @@ body {
   padding: 0 1.5rem;
 }
 
-/* Header marquee */
+/* Header */
 .hero {
-  overflow: hidden;
   border-top: 4px solid var(--black);
   border-bottom: 4px solid var(--black);
   background: var(--blue);
 }
 
-.track {
+.hero .wrap {
   display: flex;
-  width: max-content;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem 2rem;
+  padding-block: 1.5rem;
+}
+
+.brand {
   margin: 0;
-  padding: 0.15em 0 0.1em;
   color: var(--white);
-  font: 800 clamp(3.5rem, 12vw, 4.25rem)/1.2 var(--swiss);
+  font: 700 1.75rem/1.2 var(--swiss);
   text-transform: uppercase;
-  white-space: nowrap;
-  animation: scroll 40s linear infinite;
 }
 
-.track a {
+.hero nav {
+  display: flex;
+  gap: 1.5rem;
+  font: 600 0.875rem var(--swiss);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero a {
   color: var(--white);
+  text-decoration: none;
 }
 
-.track span { padding-right: 2.5em; }
-
-.track small { font-size: 0.45em; margin-left: 0.6em; }
-
-@keyframes scroll {
-  to { transform: translateX(-50%); }
+.hero a:hover,
+.hero a[aria-current="page"] {
+  background: none;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.5em;
 }
 
-@media (prefers-reduced-motion: reduce) {
-  .track { animation: none; }
-}
+.hero a:focus-visible { outline-color: var(--white); }
 
 /* Content */
-main.wrap { padding: 3rem 1.5rem 4rem; }
+main.wrap {
+  flex: 1;
+  width: 100%;
+  padding: 3rem 1.5rem 4rem;
+}
 
 .subtitle {
   margin: 0 0 2.5rem;
